@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Royal Tutorials - youtube.com/royaltutorials354 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Fontawesome Icons Offline -->
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <form action="#" class="search-box">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+    </header>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <a href="#" class="logo"><i class="fab fa-firefox"></i>Code<span>X</span></a>
+            <div class="text-sci">
+                <h2>Welcome! <br><span>To Our Website</span></h2>
+                <p>We are happy to serve you here. If you have any <br> inquiry, feel free to reach out!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <!-- Login -->
+            <div class="login-box">
+                <div class="form-box login">
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Signup -->
+                <div class="form-box register">
+                    <form action="#">
+                        <h2>Signup</h2>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" required>
+                            <label>Confirm Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I accept all terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Signup</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Signin</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginBox = document.querySelector('.login-box');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+
+        registerLink.addEventListener('click', () => {
+            loginBox.classList.add('active');
+        });
+        loginLink.addEventListener('click', () => {
+            loginBox.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

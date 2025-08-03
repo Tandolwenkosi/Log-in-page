@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #020410;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 25px 12.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ededed;
+    text-decoration: none;
+    margin-right: 30px;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #ededed;
+    border-radius: 5px;
+    transform: translateY(10px);
+    transition: 0.5s;
+    opacity: 0;
+}
+.navbar a:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+.search-box{
+    width: 250px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #ededed;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+}
+.search-box input{
+    width: 100%;
+    background-color: transparent;
+    padding-inline: 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #ededed;
+}
+.search-box input::placeholder{
+    color: #ededed;
+}
+.search-box button{
+    width: 40px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 10px;
+}
+.search-box button i{
+    font-size: 22px;
+    color: #ededed;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 540px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 25px;
+    border: 2px solid #ededed;
+    box-shadow: 0 8px 15px rgba(255,255,255,0.4);
+}
+.container .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.content .logo{
+    font-size: 38px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.content .logo span{
+    color: #f37420;
+}
+.text-sci h2{
+    font-size: 40px;
+    color: #ededed;
+    line-height: 1.3;
+}
+.text-sci h2 span{
+    color: #f37420;
+}
+.text-sci p{
+    font-size: 16px;
+    color: #ededed;
+    margin: 20px 0;
+}
+.social-links{
+    display: flex;
+}
+.social-links a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f37420;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #f37420;
+    margin-right: 15px;
+    transition: all 0.4s ease-in-out;
+}
+.social-links a:hover i{
+    border: 2px solid #bd4c01;
+    color: #bd4c01;
+}
+.container .login-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 60%);
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+.login-box .form-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    color: #ededed;
+}
+.login-box .form-box.login{
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    transition-delay: 0.7s;
+}
+.login-box.active .form-box.login{
+    transform: translateX(470px);
+    transition: transform 0.5s ease;
+}
+.login-box .form-box.register{
+    transform: translateX(470px);
+    transition: 0.5s ease;
+    transition-delay: 0s;
+}
+.login-box.active .form-box.register{
+    transform: translateX(0);
+    transition-delay: 0.7s;
+}
+.form-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+.form-box .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #ededed;
+    margin: 30px 0;
+}
+.form-box .input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #ededed;
+    padding-right: 20px;
+}
+.form-box .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.form-box .input-box input:focus ~ label,
+.form-box .input-box input:valid ~ label{
+    top: -5px;
+}
+.input-box .icon{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 20px;
+}
+.form-box .remember-forgot{
+    font-size: 14.5px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #ededed;
+    margin-right: 5px;
+}
+.remember-forgot a{
+    color: #ededed;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #f37420;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ededed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: #bd4c01;
+    letter-spacing: 1px;
+}
+.login-register{
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+.login-register p a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #ededed;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
